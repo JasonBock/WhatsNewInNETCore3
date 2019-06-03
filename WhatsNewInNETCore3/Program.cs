@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BenchmarkDotNet.Running;
+using System;
 using System.Numerics;
 using System.Runtime.Intrinsics;
 using System.Runtime.Intrinsics.X86;
@@ -8,7 +9,13 @@ namespace WhatsNewInNETCore3
 {
 	public static class Program
 	{
-		static async Task Main()
+		static void Main() =>
+			BenchmarkRunner.Run<AddingValues>();
+
+		//static async Task Main() => 
+		//	await Program.DemonstrateNewMembers();
+
+		private static async Task DemonstrateNewMembers()
 		{
 			var original = 0b_0110_0010_1101_1100u;
 			Console.Out.WriteLine(original.ToString());
