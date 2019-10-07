@@ -9,11 +9,11 @@ namespace WhatsNewInNETCore3
 {
 	public static class Program
 	{
-		static void Main() =>
-			BenchmarkRunner.Run<AddingValues>();
+		//static void Main() =>
+		//	BenchmarkRunner.Run<AddingValues>();
 
-		//static async Task Main() => 
-		//	await Program.DemonstrateNewMembers();
+		static async Task Main() =>
+			await Program.DemonstrateNewMembers();
 
 		private static async Task DemonstrateNewMembers()
 		{

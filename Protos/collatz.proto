@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package CollatzGrpc;
+
+service Collatz {
+	rpc Calculate (CollatzRequest) returns (CollatzResponse);
+}
+
+message CollatzRequest {
+	bytes number = 1;		
+}
+
+message CollatzResponse {
+	bytes number = 1;
+	repeated bytes sequence = 2;
+}
