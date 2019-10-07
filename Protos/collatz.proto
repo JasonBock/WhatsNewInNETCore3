@@ -4,6 +4,7 @@ package CollatzGrpc;
 
 service Collatz {
 	rpc Calculate (CollatzRequest) returns (CollatzResponse);
+	rpc CalculateStream (CollatzRequest) returns (stream CollatzResponse);
 }
 
 message CollatzRequest {
